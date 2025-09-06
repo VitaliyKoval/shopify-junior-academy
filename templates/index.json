@@ -221,17 +221,6 @@
     },
     "section_slider_products_6CMCQh": {
       "type": "section-slider-products",
-      "blocks": {
-        "product_7AUxPx": {
-          "type": "product",
-          "settings": {
-            "product_id": "product"
-          }
-        }
-      },
-      "block_order": [
-        "product_7AUxPx"
-      ],
       "name": "Slider Products",
       "settings": {
         "include_margins": true
