@@ -221,6 +221,17 @@
     },
     "section_slider_products_4cCbe7": {
       "type": "section-slider-products",
+      "blocks": {
+        "product_list_FKrVw7": {
+          "type": "product_list",
+          "settings": {
+            "collection_id": "some-collection-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_list_FKrVw7"
+      ],
       "name": "Slider Products",
       "settings": {
         "include_margins": true
