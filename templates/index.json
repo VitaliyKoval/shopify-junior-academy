@@ -221,17 +221,6 @@
     },
     "section_slider_products_6CMCQh": {
       "type": "section-slider-products",
-      "blocks": {
-        "product_B6tnWw": {
-          "type": "product",
-          "settings": {
-            "product_id": "sneakers"
-          }
-        }
-      },
-      "block_order": [
-        "product_B6tnWw"
-      ],
       "name": "Slider Products",
       "settings": {
         "include_margins": true
