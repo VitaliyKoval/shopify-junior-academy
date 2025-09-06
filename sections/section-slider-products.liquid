@@ -1,42 +1,16 @@
+<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+
 {{ 'slick.css' | asset_url | stylesheet_tag }}
 {{ 'slick-theme.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
 <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
 <script>
   console.log('product init');
-
-  if (window.jQuery && jQuery().slick) {
-    $('.slider-products').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      arrows: true,
-      dots: true,
-      infinite: true,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 3 },
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 2 },
-        },
-        {
-          breakpoint: 480,
-          settings: { slidesToShow: 1 },
-        },
-      ],
-    });
-  } else {
-    console.warn('Slick не завантажився або немає jQuery');
-  }
 </script>
-
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
-</div>
 
 {% schema %}
 {
