@@ -15,12 +15,8 @@
   outline: none;
   border-radius: 100%;
   cursor: pointer;
-  transition: 0.3s linear opacity;
-  opacity: 1;
 }
-.slick-slider .slick-arrow:hover {
-  opacity: 0.8;
-}
+
 .slick-slider .slick-arrow:before {
   position: absolute;
   top: 50%;
@@ -45,6 +41,7 @@
 }
 
 .slider-product__container {
+  padding: 25px 50px;
 }
 .slider-product__content {
 }

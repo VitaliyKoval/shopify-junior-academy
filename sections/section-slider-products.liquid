@@ -1,4 +1,4 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %} slider-product__container">
   <div class="slider-product__content">
     <h2 class="slider-product__title">Produt title</h2>
     <div class="slider-product__subtitle">Produt subtitle</div>
@@ -46,8 +46,25 @@
   document.addEventListener('DOMContentLoaded', function () {
     $('#shopify-section-{{section.id}} .products_list').slick({
       slidesToShow: {{section.settings.slider_item}},
-      slidesToScroll: 3,
       infinite: true,
+      slidesToScroll: 2,
+      speed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: {{ section.settings.slider_items_tab }},
+            slidesToScroll: {{ section.settings.slider_items_tab }}
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow:  1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
   });
 </script>
