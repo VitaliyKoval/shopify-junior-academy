@@ -62,9 +62,6 @@
 }
 .products_list {
 }
-.product_image {
-  overflow: hidden;
-}
 
 .product_link {
   display: block;
@@ -73,6 +70,15 @@
   color: #121212;
 }
 .product_slide {
+  padding: 20px;
+  overflow: hidden;
+}
+.product_link:hover .product_slide .product_image {
+  transform: scale(1.1);
+}
+
+.product_image {
+  transition: 0.3s linear transform;
   overflow: hidden;
 }
 .product_title {
