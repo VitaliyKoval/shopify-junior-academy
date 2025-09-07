@@ -5,16 +5,16 @@
         {% assign products = block.settings.collection_id.products %}
         {% for product in products %}
           <div class="slide">
-            {{ product.title }}
+            <h3>{{ product.title }}</h3>
+            {% if product.featured_image %}
+              <img
+                src="{{ product.featured_image | image_url: width: 240, height: 240, crop: 'center' }}"
+                alt="{{ product.featured_image.alt | escape }}"
+                width="240"
+                height="240"
+              >
+            {% endif %}
           </div>
-          {% if product.featured_image %}
-            <img
-              src="{{ product.featured_image | img_url: 'medium' }}"
-              alt="{{ product.featured_image.alt | escape }}"
-              width="{{ product.featured_image.width }}"
-              height="{{ product.featured_image.height }}"
-            >
-          {% endif %}
         {% endfor %}
       {% endif %}
     {% endfor %}
@@ -29,7 +29,7 @@
   document.addEventListener('DOMContentLoaded', function () {
     console.log('product init');
     $('.slider').slick({
-      slidesToShow: 4,
+      slidesToShow: 3.5,
       slidesToScroll: 1,
       infinite: true,
     });
