@@ -259,7 +259,8 @@
       "type": "image-get-links",
       "name": "Image get Links",
       "settings": {
-        "get_image_v_1": "shopify://shop_images/2025-05-21171734_303ba70c-132d-4c4c-86a5-25de6a4e9832.png"
+        "get_image_v_1": "shopify://shop_images/2025-05-21171734_303ba70c-132d-4c4c-86a5-25de6a4e9832.png",
+        "get_image_v_2": "shopify://shop_images/2025-05-21171734_303ba70c-132d-4c4c-86a5-25de6a4e9832.png"
       }
     }
   },
