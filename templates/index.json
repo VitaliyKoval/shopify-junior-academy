@@ -9,6 +9,24 @@
  */
 {
   "sections": {
+    "section_slider_products_ftUaqt": {
+      "type": "section-slider-products",
+      "blocks": {
+        "product_list_gTnAtw": {
+          "type": "product_list",
+          "settings": {
+            "collection_id": "some-collection-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_list_gTnAtw"
+      ],
+      "name": "Slider Products",
+      "settings": {
+        "slider_item": 3
+      }
+    },
     "image_banner": {
       "type": "image-banner",
       "blocks": {
@@ -234,11 +252,12 @@
       ],
       "name": "Slider Products",
       "settings": {
-        "include_margins": true
+        "slider_item": 2
       }
     }
   },
   "order": [
+    "section_slider_products_ftUaqt",
     "image_banner",
     "rich_text",
     "featured_collection",

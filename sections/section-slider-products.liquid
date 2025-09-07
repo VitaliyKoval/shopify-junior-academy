@@ -1,23 +1,25 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}">
-  <div class="slider">
-    {% for block in section.blocks %}
-      {% if block.type == 'product_list' %}
-        {% assign products = block.settings.collection_id.products %}
-        {% for product in products %}
-          <div class="slide">
-            <h3>{{ product.title }}</h3>
-            {% if product.featured_image %}
-              <img
-                src="{{ product.featured_image | image_url: width: 240, height: 240, crop: 'center' }}"
-                alt="{{ product.featured_image.alt | escape }}"
-                width="240"
-                height="240"
-              >
-            {% endif %}
-          </div>
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+  <div class="products_slider">
+    <div class="products_list">
+      {% for block in section.blocks %}
+        {% if block.type == 'product_list' %}
+          {% assign products = block.settings.collection_id.products %}
+          {% for product in products %}
+            <div class="slide">
+              <h3>{{ product.title }}</h3>
+              {% if product.featured_image %}
+                <img
+                  src="{{ product.featured_image | image_url: width: 240, height: 240, crop: 'center' }}"
+                  alt="{{ product.featured_image.alt | escape }}"
+                  width="240"
+                  height="240"
+                >
+              {% endif %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </div>
   </div>
 </div>
 
@@ -27,10 +29,9 @@
 <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    console.log('product init');
-    $('.slider').slick({
-      slidesToShow: 3.5,
-      slidesToScroll: 1,
+    $('#shopify-section-{{section.id}} .products_list').slick({
+      slidesToShow: {{section.settings.slider_item}},
+      slidesToScroll: 3,
       infinite: true,
     });
   });
@@ -43,10 +44,13 @@
   "class": "section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "include_margins",
-      "default": true,
-      "label": "t:sections.apps.settings.include_margins.label"
+      "type": "range",
+      "id": "slider_item",
+      "label": "Items per page",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2
     }
   ],
   "blocks": [
