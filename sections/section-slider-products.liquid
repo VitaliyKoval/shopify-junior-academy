@@ -1,21 +1,36 @@
-<div class="{% if section.settings.include_margins %}page-width{% endif %}">
+<div class="{% if section.settings.include_margins %}page-width{% endif %} slider-product__container">
+  <div class="slider-product__content">
+    <h2 class="slider-product__title">Produt title</h2>
+    <div class="slider-product__subtitle">Produt subtitle</div>
+  </div>
   <div class="products_slider">
     <div class="products_list">
       {% for block in section.blocks %}
         {% if block.type == 'product_list' %}
           {% assign products = block.settings.collection_id.products %}
           {% for product in products %}
-            <div class="slide">
-              <h3>{{ product.title }}</h3>
-              {% if product.featured_image %}
-                <img
-                  src="{{ product.featured_image | image_url: width: 240, height: 240, crop: 'center' }}"
-                  alt="{{ product.featured_image.alt | escape }}"
-                  width="240"
-                  height="240"
-                >
-              {% endif %}
-            </div>
+            <a href="{{ product.url }}" class="product_link">
+              <div class="product_slide">
+                {% if product.featured_image %}
+                  <img
+                    class="product_image"
+                    src="{{ product.featured_image | image_url: width: 240, height: 240, crop: 'center' }}"
+                    alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                    width="240"
+                    height="240"
+                  >
+                {% endif %}
+                <h3 class="product_title">{{ product.title }}</h3>
+                {% if product.content != blank %}
+                  <div class="product_content">
+                    {{ product.content | truncate: 200, '...' }}
+                  </div>
+                {% endif %}
+                <div class="product_price">
+                  {{ product.price | money_with_currency }}
+                </div>
+              </div>
+            </a>
           {% endfor %}
         {% endif %}
       {% endfor %}
@@ -31,8 +46,25 @@
   document.addEventListener('DOMContentLoaded', function () {
     $('#shopify-section-{{section.id}} .products_list').slick({
       slidesToShow: {{section.settings.slider_item}},
-      slidesToScroll: 3,
       infinite: true,
+      slidesToScroll: 2,
+      speed: 1000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: {{ section.settings.slider_item }},
+            slidesToScroll: {{ section.settings.slider_item }}
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow:  1,
+            slidesToScroll: 1
+          }
+        }
+      ]
     });
   });
 </script>
