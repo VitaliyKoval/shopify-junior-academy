@@ -1,7 +1,24 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}">
-  {%- for block in section.blocks -%}
-    {% render block %}
-  {%- endfor -%}
+  <div class="slider">
+    {% for block in section.blocks %}
+      {% if block.type == 'product_list' %}
+        {% assign products = block.settings.collection_id.products %}
+        {% for product in products %}
+          <div class="slide">
+            {{ product.title }}
+          </div>
+          {% if product.featured_image %}
+            <img
+              src="{{ product.featured_image | img_url: 'medium' }}"
+              alt="{{ product.featured_image.alt | escape }}"
+              width="{{ product.featured_image.width }}"
+              height="{{ product.featured_image.height }}"
+            >
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  </div>
 </div>
 
 {{ 'slick.css' | asset_url | stylesheet_tag }}
@@ -9,7 +26,14 @@
 <script src="{{ 'jquery.min.js' | asset_url }}" defer></script>
 <script src="{{ 'slick.min.js' | asset_url }}" defer></script>
 <script>
-  console.log('product init');
+  document.addEventListener('DOMContentLoaded', function () {
+    console.log('product init');
+    $('.slider').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      infinite: true,
+    });
+  });
 </script>
 
 {% schema %}
@@ -29,7 +53,6 @@
     {
       "type": "product_list",
       "name": "Product List",
-      "limit": 20,
       "settings": [
         {
           "type": "collection",
