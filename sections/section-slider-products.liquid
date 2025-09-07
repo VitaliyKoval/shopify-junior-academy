@@ -1,5 +1,5 @@
 <div class="{% if section.settings.include_margins %}page-width{% endif %}">
-  <div class="slider">
+  <div class="products_slider">
     {% for block in section.blocks %}
       {% if block.type == 'product_list' %}
         {% assign products = block.settings.collection_id.products %}
@@ -28,7 +28,7 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     console.log('product init');
-    $('.slider').slick({
+    $('#shopify-section-{{section.id}}.products_slider').slick({
       slidesToShow: {{section.settings.slider_item}},
       slidesToScroll: 3,
       infinite: true,
