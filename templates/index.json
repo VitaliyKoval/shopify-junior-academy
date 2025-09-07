@@ -254,13 +254,6 @@
       "settings": {
         "slider_item": 4
       }
-    },
-    "image_get_links_jdFE9x": {
-      "type": "image-get-links",
-      "name": "Image get Links",
-      "settings": {
-        "get_image_v_1": "shopify://shop_images/2025-05-21171734_303ba70c-132d-4c4c-86a5-25de6a4e9832.png"
-      }
     }
   },
   "order": [
@@ -271,7 +264,6 @@
     "collage",
     "video",
     "multicolumn",
-    "section_slider_products_4cCbe7",
-    "image_get_links_jdFE9x"
+    "section_slider_products_4cCbe7"
   ]
 }
