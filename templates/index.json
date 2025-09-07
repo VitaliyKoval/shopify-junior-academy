@@ -255,10 +255,12 @@
         "slider_item": 4
       }
     },
-    "image_get_links_DRTKKM": {
+    "image_get_links_rbt3fM": {
       "type": "image-get-links",
       "name": "Image get Links",
-      "settings": {}
+      "settings": {
+        "get_image_v_1": "shopify://shop_images/2025-05-21171619_940d6451-b181-40de-b561-dcad43600178.png"
+      }
     }
   },
   "order": [
@@ -270,6 +272,6 @@
     "video",
     "multicolumn",
     "section_slider_products_4cCbe7",
-    "image_get_links_DRTKKM"
+    "image_get_links_rbt3fM"
   ]
 }
