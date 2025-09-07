@@ -11,6 +11,17 @@
   "sections": {
     "section_slider_products_ftUaqt": {
       "type": "section-slider-products",
+      "blocks": {
+        "product_list_gTnAtw": {
+          "type": "product_list",
+          "settings": {
+            "collection_id": "some-collection-1"
+          }
+        }
+      },
+      "block_order": [
+        "product_list_gTnAtw"
+      ],
       "name": "Slider Products",
       "settings": {
         "slider_item": 3
