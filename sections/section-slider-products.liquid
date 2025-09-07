@@ -29,8 +29,8 @@
   document.addEventListener('DOMContentLoaded', function () {
     console.log('product init');
     $('.slider').slick({
-      slidesToShow: 3.5,
-      slidesToScroll: 1,
+      slidesToShow: {{section.settings.slider_item}},
+      slidesToScroll: 3,
       infinite: true,
     });
   });
@@ -43,10 +43,13 @@
   "class": "section",
   "settings": [
     {
-      "type": "checkbox",
-      "id": "include_margins",
-      "default": true,
-      "label": "t:sections.apps.settings.include_margins.label"
+      "type": "range",
+      "id": "slider_item",
+      "label": "Items per page",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2
     }
   ],
   "blocks": [
