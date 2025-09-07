@@ -234,7 +234,14 @@
       ],
       "name": "Slider Products",
       "settings": {
-        "include_margins": true
+        "slider_item": 2
+      }
+    },
+    "section_slider_products_ftUaqt": {
+      "type": "section-slider-products",
+      "name": "Slider Products",
+      "settings": {
+        "slider_item": 3
       }
     }
   },
@@ -245,6 +252,7 @@
     "collage",
     "video",
     "multicolumn",
-    "section_slider_products_4cCbe7"
+    "section_slider_products_4cCbe7",
+    "section_slider_products_ftUaqt"
   ]
 }
