@@ -1,5 +1,6 @@
 <div style="border: 1px solid orange; padding: 50px;">
   {% comment %} {{ product | json }} {% endcomment %}
+  {% assign product = section.settings.collection[0] %}
   <div>product.title - string - {{ product.title }}</div>
   <div>product.id - number - {{ product.id }}</div>
   <div>product.tags - array - [{{ product.tags | join: ', ' }}]</div>
@@ -11,7 +12,7 @@
   <div>
     product.variants[0].title == id - array size - ({{ product.variants[0].title }} == {{ product.variants[0].id }})
   </div>
-  {% if product.variants.size > 0 %}
+  {% if product.variants.size != 0 %}
     <ul>
       {% for variant in product.variants %}
         <li>
@@ -35,7 +36,7 @@ ewqew
     {% for product in collection.products %}
       <div style="border: 1px solid red; padding: 2px;">
         <h3>Product object = {{ product.title }}</h3>
-        {% if product.variants.size > 0 %}
+        {% if product.variants.size != 0 %}
           <div style="border: 1px solid orange; padding: 2px;">
             {% for variant in product.variants %}
               <div style="border: 1px solid rgb(212, 89, 186); padding: 2px;">
