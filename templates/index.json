@@ -262,6 +262,13 @@
         "get_image_v_1": "shopify://shop_images/2025-05-21171619_940d6451-b181-40de-b561-dcad43600178.png",
         "get_image_v_2": "shopify://shop_images/2025-05-21171734_303ba70c-132d-4c4c-86a5-25de6a4e9832.png"
       }
+    },
+    "product_object_y49pqp": {
+      "type": "product-object",
+      "name": "Product object",
+      "settings": {
+        "collection": "some-collection-3"
+      }
     }
   },
   "order": [
@@ -273,6 +280,7 @@
     "video",
     "multicolumn",
     "section_slider_products_4cCbe7",
-    "image_get_links_rbt3fM"
+    "image_get_links_rbt3fM",
+    "product_object_y49pqp"
   ]
 }
