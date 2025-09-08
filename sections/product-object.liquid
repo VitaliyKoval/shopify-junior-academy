@@ -1,6 +1,6 @@
 <div style="border: 1px solid orange; padding: 50px;">
   {% comment %} {{ product | json }} {% endcomment %}
-  {% assign product = section.settings.collection[0] %}
+  {% assign product = section.settings.collection.products[0] %}
   <div>product.title - string - {{ product.title }}</div>
   <div>product.id - number - {{ product.id }}</div>
   <div>product.tags - array - [{{ product.tags | join: ', ' }}]</div>
