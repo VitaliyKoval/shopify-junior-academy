@@ -9,8 +9,8 @@
         {% if block.type == 'product_list' %}
           {% assign products = block.settings.collection_id.products %}
           {% for product in products %}
-            <a href="{{ product.url }}" class="product_link">
-              <div class="product_slide">
+            <div class="product_slide">
+              <a href="{{ product.url }}" class="product_link" style="display: block">
                 {% if product.featured_image %}
                   <img
                     class="product_image"
@@ -29,8 +29,9 @@
                 <div class="product_price">
                   {{ product.price | money_with_currency }}
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
+
             {%- assign product_form_id = 'quick-add-' | append: section_id | append: product.id -%}
             <product-form>
               {%- form 'product',
