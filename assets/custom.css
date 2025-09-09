@@ -60,11 +60,10 @@
 .products_slider {
   margin-top: 30px;
 }
-.products_list {
-}
 
 .product_link {
   display: block;
+  margin-bottom: 20px;
   cursor: pointer;
   text-decoration: none;
   color: #121212;
@@ -80,10 +79,4 @@
 .product_image {
   transition: 0.3s linear transform;
   overflow: hidden;
-}
-.product_title {
-}
-.product_content {
-}
-.product_price {
 }
