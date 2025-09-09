@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "facebook_id": "meta_shopify",
     "another_script": "<script>console.log('Another script works')<\\/script></script>",
     "colors_solid_button_labels": "#ffffff",
     "colors_accent_1": "#121212",
