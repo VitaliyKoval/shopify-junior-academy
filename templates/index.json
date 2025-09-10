@@ -269,6 +269,47 @@
       "settings": {
         "collection": "some-collection-3"
       }
+    },
+    "schema_settings_blocks_fmczQm": {
+      "type": "schema-settings-blocks",
+      "blocks": {
+        "benefit_UBzMmM": {
+          "type": "benefit",
+          "settings": {
+            "title": "",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4",
+            "benefit_5": "",
+            "benefit_6": "benefit text 6"
+          }
+        },
+        "benefit_HQTTVd": {
+          "type": "benefit",
+          "settings": {
+            "title": "",
+            "benefit_1": "benefit text 1",
+            "benefit_2": "benefit text 2",
+            "benefit_3": "benefit text 3",
+            "benefit_4": "benefit text 4",
+            "benefit_5": "",
+            "benefit_6": "benefit text 6"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_UBzMmM",
+        "benefit_HQTTVd"
+      ],
+      "custom_css": [
+        "body {background: red !important;}"
+      ],
+      "name": "Schema section blocks add",
+      "settings": {
+        "title": "Benefits",
+        "description": "<p>Our benfit description</p>"
+      }
     }
   },
   "order": [
@@ -281,6 +322,7 @@
     "multicolumn",
     "section_slider_products_4cCbe7",
     "image_get_links_rbt3fM",
-    "product_object_y49pqp"
+    "product_object_y49pqp",
+    "schema_settings_blocks_fmczQm"
   ]
 }
