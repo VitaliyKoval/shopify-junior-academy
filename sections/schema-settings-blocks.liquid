@@ -27,7 +27,7 @@
       {{ section.settings.description }}
     </div>
   {% endif %}
-  {% if section.blocks.size > 0 %}
+  {% if section.blocks.size != 0 %}
     <ul>
       {% comment %} Repiter for blocks {% endcomment %}
       {% for block in section.blocks %}
