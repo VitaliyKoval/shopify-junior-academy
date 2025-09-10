@@ -320,15 +320,15 @@
         "input_html": "<b style=\"color: red;\">Our html input</b>",
         "input_liquid": "{% if 'true' == '131935' %} True {% else %} False {% endif %}",
         "input_number": 131935,
-        "input_range": 49,
-        "input_radio": "pink",
-        "input_select": "pink",
+        "input_range": 42,
+        "input_radio": "rgba(0,0,0,0.5)",
+        "input_select": "red",
         "input_checkbox": true,
         "input_link": "",
         "input_menu": "",
-        "input_color": "#EADDCA",
-        "input_bg_color": "#FFC0CB",
-        "input_background": "linear-gradient(180deg, rgba(255, 255, 255, 1), rgba(0, 0, 0, 1) 100%)"
+        "input_color": "#47d61e",
+        "input_bg_color": "#deeaca",
+        "input_background": "linear-gradient(180deg, rgba(178, 29, 29, 1), rgba(0, 0, 0, 1) 100%)"
       }
     }
   },
