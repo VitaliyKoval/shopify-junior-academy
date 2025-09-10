@@ -315,7 +315,7 @@
       "settings": {
         "input_text": "Our default text field",
         "input_textarea": "Our default textarea field. We can use more letters and words than in the default text field",
-        "input_richtext": "",
+        "input_richtext": "<p>Input <em>some</em> <strong>richtext</strong></p>",
         "input_inline_richtext": "my <em>inline</em> <strong>text</strong>",
         "input_html": "<b style=\"color: red;\">Our html input</b>",
         "input_liquid": "{% if 'true' == '131935' %} True {% else %} False {% endif %}",
