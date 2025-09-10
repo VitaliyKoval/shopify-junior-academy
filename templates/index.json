@@ -288,7 +288,7 @@
         "benefit_HQTTVd": {
           "type": "benefit",
           "settings": {
-            "title": "",
+            "title": "benefit",
             "benefit_1": "benefit text 1",
             "benefit_2": "benefit text 2",
             "benefit_3": "benefit text 3",
