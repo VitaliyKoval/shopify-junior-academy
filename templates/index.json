@@ -302,9 +302,7 @@
         "benefit_UBzMmM",
         "benefit_HQTTVd"
       ],
-      "custom_css": [
-        "body {background: red !important;}"
-      ],
+      "custom_css": [],
       "name": "Schema section blocks add",
       "settings": {
         "title": "Benefits",
